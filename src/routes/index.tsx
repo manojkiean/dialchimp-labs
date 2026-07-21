@@ -68,21 +68,21 @@ function Nav() {
         <a href="#top" className="flex items-center gap-2 pl-2">
           <div className="relative h-7 w-7">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#06B6D4]" />
-            <div className="absolute inset-[3px] rounded-full bg-[#0a0a0a] grid place-items-center">
-              <Sparkles className="h-3 w-3 text-white" />
+            <div className="absolute inset-[3px] rounded-full bg-white grid place-items-center">
+              <Sparkles className="h-3 w-3 text-slate-900" />
             </div>
           </div>
           <span className="text-sm font-semibold tracking-tight">Dialchimp Labs</span>
         </a>
-        <nav className="hidden md:flex items-center gap-7 text-sm text-white/70">
-          <a href="#services" className="hover:text-white transition">Services</a>
-          <a href="#process" className="hover:text-white transition">Process</a>
-          <a href="#work" className="hover:text-white transition">Work</a>
-          <a href="#why" className="hover:text-white transition">Why us</a>
+        <nav className="hidden md:flex items-center gap-7 text-sm text-slate-600">
+          <a href="#services" className="hover:text-slate-900 transition">Services</a>
+          <a href="#process" className="hover:text-slate-900 transition">Process</a>
+          <a href="#work" className="hover:text-slate-900 transition">Work</a>
+          <a href="#why" className="hover:text-slate-900 transition">Why us</a>
         </nav>
         <a
           href="#contact"
-          className="group inline-flex items-center gap-1.5 rounded-full bg-white pl-4 pr-3 py-2 text-sm font-medium text-black hover:bg-white/90 transition"
+          className="group inline-flex items-center gap-1.5 rounded-full bg-white pl-4 pr-3 py-2 text-sm font-medium text-black hover:bg-slate-900/90 transition"
         >
           Start a project
           <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -139,7 +139,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 + i * 0.15, duration: 0.8 }}
           style={{ left: n.x, top: n.y, animationDelay: `${n.d}s` }}
-          className="pointer-events-none absolute hidden md:flex animate-float-slow items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-white/80"
+          className="pointer-events-none absolute hidden md:flex animate-float-slow items-center gap-2 glass rounded-full px-3 py-1.5 text-xs text-slate-900/80"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-[#06B6D4] shadow-[0_0_10px_#06B6D4]" />
           {n.t}
@@ -151,7 +151,7 @@ function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 glass rounded-full px-3 py-1 text-xs text-white/70"
+          className="inline-flex items-center gap-2 glass rounded-full px-3 py-1 text-xs text-slate-600"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_10px_#34d399]" />
           Now taking Q1 2026 projects
@@ -174,7 +174,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.7 }}
-          className="mx-auto mt-8 max-w-2xl text-base md:text-lg text-white/60"
+          className="mx-auto mt-8 max-w-2xl text-base md:text-lg text-slate-600"
         >
           We build intelligent digital solutions that automate workflows, accelerate
           growth, and create exceptional customer experiences.
@@ -195,7 +195,7 @@ function Hero() {
           </a>
           <a
             href="#services"
-            className="glass grad-border-ring inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm text-white/90 hover:text-white transition"
+            className="glass grad-border-ring inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm text-slate-800 hover:text-slate-900 transition"
           >
             View services
           </a>
@@ -214,7 +214,7 @@ function TechMarquee() {
   const loop = [...items, ...items];
   return (
     <section className="relative py-16">
-      <p className="text-center text-xs uppercase tracking-[0.25em] text-white/40">
+      <p className="text-center text-xs uppercase tracking-[0.25em] text-slate-400">
         Built with modern technologies
       </p>
       <div
@@ -228,7 +228,7 @@ function TechMarquee() {
           {loop.map((t, i) => (
             <span
               key={i}
-              className="text-2xl md:text-3xl font-semibold text-white/25 hover:text-white/70 transition"
+              className="text-2xl md:text-3xl font-semibold text-slate-300 hover:text-slate-600 transition"
             >
               {t}
             </span>
@@ -265,11 +265,11 @@ function Services() {
             >
               <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-[#7C3AED]/0 blur-2xl transition-all duration-500 group-hover:bg-[#7C3AED]/25" />
               <div className="glass inline-flex h-11 w-11 items-center justify-center rounded-xl">
-                <s.icon className="h-5 w-5 text-white" />
+                <s.icon className="h-5 w-5 text-slate-900" />
               </div>
               <h3 className="mt-5 text-lg font-semibold tracking-tight">{s.title}</h3>
-              <p className="mt-2 text-sm text-white/60 leading-relaxed">{s.desc}</p>
-              <div className="mt-6 inline-flex items-center gap-1 text-xs text-white/50 group-hover:text-white transition">
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed">{s.desc}</p>
+              <div className="mt-6 inline-flex items-center gap-1 text-xs text-slate-500 group-hover:text-slate-900 transition">
                 Learn more <ArrowUpRight className="h-3.5 w-3.5" />
               </div>
             </motion.div>
@@ -314,21 +314,21 @@ function Process() {
                 transition={{ delay: i * 0.05, duration: 0.6 }}
                 className="relative"
               >
-                <div className="absolute -left-[26px] md:-left-[46px] top-1 grid h-6 w-6 place-items-center rounded-full bg-[#0a0a0a] border border-white/10">
+                <div className="absolute -left-[26px] md:-left-[46px] top-1 grid h-6 w-6 place-items-center rounded-full bg-white border border-slate-200">
                   <div className="h-2 w-2 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#06B6D4]" />
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="glass hidden md:inline-flex h-11 w-11 items-center justify-center rounded-xl">
-                    <s.icon className="h-5 w-5 text-white" />
+                    <s.icon className="h-5 w-5 text-slate-900" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-widest text-white/40">
+                    <div className="text-xs uppercase tracking-widest text-slate-400">
                       Step 0{i + 1}
                     </div>
                     <h3 className="mt-1 text-2xl md:text-3xl font-semibold tracking-tight">
                       {s.title}
                     </h3>
-                    <p className="mt-2 max-w-xl text-white/60">{s.desc}</p>
+                    <p className="mt-2 max-w-xl text-slate-600">{s.desc}</p>
                   </div>
                 </div>
               </motion.div>
@@ -353,7 +353,7 @@ function FeaturedSolutions() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <SectionHeading eyebrow="Featured Solutions" title={<>Products we've <span className="grad-text">already shipped</span>.</>} />
-          <p className="max-w-sm text-sm text-white/50">
+          <p className="max-w-sm text-sm text-slate-500">
             A glimpse into how Dialchimp Labs blends AI, design and engineering into
             production-ready products.
           </p>
@@ -376,16 +376,16 @@ function FeaturedSolutions() {
             >
               <div className={`absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gradient-to-br ${s.grad} opacity-30 blur-3xl transition-opacity duration-500 group-hover:opacity-60`} />
               <div>
-                <span className="glass rounded-full px-3 py-1 text-[10px] uppercase tracking-widest text-white/70">
+                <span className="glass rounded-full px-3 py-1 text-[10px] uppercase tracking-widest text-slate-600">
                   {s.tag}
                 </span>
                 <h3 className="mt-5 text-2xl font-semibold tracking-tight leading-snug">
                   {s.title}
                 </h3>
-                <p className="mt-3 text-sm text-white/60 leading-relaxed">{s.desc}</p>
+                <p className="mt-3 text-sm text-slate-600 leading-relaxed">{s.desc}</p>
               </div>
               <div className="flex items-center justify-between">
-                <div className="text-xs text-white/40">0{i + 1} / 0{solutions.length}</div>
+                <div className="text-xs text-slate-400">0{i + 1} / 0{solutions.length}</div>
                 <div className="glass grid h-10 w-10 place-items-center rounded-full transition group-hover:bg-white group-hover:text-black">
                   <ArrowUpRight className="h-4 w-4" />
                 </div>
@@ -422,11 +422,11 @@ function Why() {
               className="grad-border grad-border-ring group relative flex items-start gap-5 rounded-2xl p-7"
             >
               <div className="glass shrink-0 inline-flex h-12 w-12 items-center justify-center rounded-xl">
-                <r.icon className="h-5 w-5 text-white" />
+                <r.icon className="h-5 w-5 text-slate-900" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold tracking-tight">{r.title}</h3>
-                <p className="mt-1.5 text-sm text-white/60 leading-relaxed">{r.desc}</p>
+                <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">{r.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -446,11 +446,11 @@ function CTA() {
             <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[420px] w-[720px] rounded-full bg-[#7C3AED]/30 blur-[110px] animate-blob" />
             <div className="absolute bottom-0 right-0 h-[320px] w-[420px] rounded-full bg-[#06B6D4]/25 blur-[110px] animate-blob [animation-delay:-8s]" />
           </div>
-          <p className="text-xs uppercase tracking-[0.3em] text-white/50">Let's build</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Let's build</p>
           <h2 className="mt-4 font-display font-semibold tracking-[-0.03em] text-[44px] md:text-[72px] leading-[0.95]">
             Ready to build <span className="grad-text">smarter</span>?
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-white/60">
+          <p className="mx-auto mt-6 max-w-xl text-slate-600">
             Transform your ideas into intelligent digital solutions with a team that
             treats your product like its own.
           </p>
@@ -464,7 +464,7 @@ function CTA() {
             </a>
             <a
               href="mailto:hello@dialchimplabs.com"
-              className="glass inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm text-white/90 hover:text-white transition"
+              className="glass inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm text-slate-800 hover:text-slate-900 transition"
             >
               hello@dialchimplabs.com
             </a>
@@ -477,24 +477,24 @@ function CTA() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/5 py-12">
+    <footer className="border-t border-slate-200/70 py-12">
       <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
           <div className="relative h-7 w-7">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#06B6D4]" />
-            <div className="absolute inset-[3px] rounded-full bg-[#0a0a0a] grid place-items-center">
-              <Sparkles className="h-3 w-3 text-white" />
+            <div className="absolute inset-[3px] rounded-full bg-white grid place-items-center">
+              <Sparkles className="h-3 w-3 text-slate-900" />
             </div>
           </div>
           <span className="text-sm font-semibold">Dialchimp Labs</span>
         </div>
-        <p className="text-xs text-white/40">
+        <p className="text-xs text-slate-400">
           © {new Date().getFullYear()} Dialchimp Labs. Crafted between England & India.
         </p>
-        <div className="flex items-center gap-6 text-xs text-white/50">
-          <a href="#services" className="hover:text-white">Services</a>
-          <a href="#work" className="hover:text-white">Work</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
+        <div className="flex items-center gap-6 text-xs text-slate-500">
+          <a href="#services" className="hover:text-slate-900">Services</a>
+          <a href="#work" className="hover:text-slate-900">Work</a>
+          <a href="#contact" className="hover:text-slate-900">Contact</a>
         </div>
       </div>
     </footer>
@@ -515,7 +515,7 @@ function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-xs uppercase tracking-[0.3em] text-white/40"
+        className="text-xs uppercase tracking-[0.3em] text-slate-400"
       >
         {eyebrow}
       </motion.p>
@@ -534,7 +534,7 @@ function SectionHeading({
 
 function Landing() {
   return (
-    <main className="relative min-h-screen bg-[#080808] text-white overflow-x-hidden">
+    <main className="relative min-h-screen bg-[#f6f4ff] text-slate-900 overflow-x-hidden">
       <Nav />
       <Hero />
       <TechMarquee />
