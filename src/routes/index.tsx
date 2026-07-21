@@ -20,6 +20,7 @@ import {
   Workflow,
   TrendingUp,
 } from "lucide-react";
+import heroVideo from "@/assets/hero-ai.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -101,16 +102,25 @@ function Hero() {
 
   return (
     <section ref={ref} id="top" className="relative overflow-hidden pt-40 pb-28 md:pt-52 md:pb-40">
-      {/* animated mesh */}
+      {/* video + animated mesh */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full bg-[#7C3AED]/30 blur-[120px] animate-blob" />
-        <div className="absolute top-24 -right-32 h-[520px] w-[520px] rounded-full bg-[#06B6D4]/25 blur-[120px] animate-blob [animation-delay:-6s]" />
-        <div className="absolute bottom-0 left-1/3 h-[420px] w-[420px] rounded-full bg-fuchsia-500/15 blur-[120px] animate-blob [animation-delay:-12s]" />
+        <video
+          src={heroVideo.url}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover opacity-70 mix-blend-multiply"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f6f4ff]/40 via-[#f6f4ff]/60 to-[#f6f4ff]" />
+        <div className="absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full bg-[#7C3AED]/25 blur-[120px] animate-blob" />
+        <div className="absolute top-24 -right-32 h-[520px] w-[520px] rounded-full bg-[#06B6D4]/20 blur-[120px] animate-blob [animation-delay:-6s]" />
+        <div className="absolute bottom-0 left-1/3 h-[420px] w-[420px] rounded-full bg-fuchsia-400/15 blur-[120px] animate-blob [animation-delay:-12s]" />
         <div
-          className="absolute inset-0 opacity-[0.05]"
+          className="absolute inset-0 opacity-[0.06]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,255,255,.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.7) 1px, transparent 1px)",
+              "linear-gradient(rgba(60,40,120,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(60,40,120,.6) 1px, transparent 1px)",
             backgroundSize: "56px 56px",
             maskImage: "radial-gradient(ellipse at 50% 40%, black 40%, transparent 75%)",
           }}
@@ -121,7 +131,7 @@ function Hero() {
             left: mouse.x - 190,
             top: mouse.y - 190,
             background:
-              "radial-gradient(circle, rgba(124,58,237,0.25), transparent 60%)",
+              "radial-gradient(circle, rgba(124,58,237,0.22), transparent 60%)",
           }}
         />
       </div>
