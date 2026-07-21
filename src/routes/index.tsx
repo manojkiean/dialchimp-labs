@@ -20,6 +20,7 @@ import {
   Workflow,
   TrendingUp,
 } from "lucide-react";
+import heroVideo from "@/assets/hero-ai.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
