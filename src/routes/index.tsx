@@ -94,6 +94,45 @@ function Nav() {
   );
 }
 
+function HeroVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (visible) videoRef.current?.play().catch(() => {});
+  }, [visible]);
+
+  return (
+    <video
+      ref={videoRef}
+      poster={heroPoster.url}
+      src={visible ? heroVideo.url : undefined}
+      preload="none"
+      loop
+      muted
+      playsInline
+      autoPlay
+      className="absolute inset-0 h-full w-full object-cover opacity-70 mix-blend-multiply"
+    />
+  );
+}
+
 function Hero() {
   const mouse = useMouseGlow();
   const ref = useRef<HTMLDivElement>(null);
