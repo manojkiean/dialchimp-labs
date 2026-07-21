@@ -27,26 +27,26 @@
 
 :root {
   --radius: 0.875rem;
-  --background: oklch(0.145 0.012 285);
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.18 0.015 285);
-  --card-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.62 0.24 296);
+  --background: oklch(0.985 0.005 270);
+  --foreground: oklch(0.22 0.03 265);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 265);
+  --primary: oklch(0.68 0.16 285);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.75 0.16 210);
-  --secondary-foreground: oklch(0.12 0 0);
-  --muted: oklch(0.22 0.01 285);
-  --muted-foreground: oklch(0.72 0.01 285);
-  --accent: oklch(0.98 0 0);
-  --accent-foreground: oklch(0.12 0 0);
-  --border: oklch(1 0 0 / 8%);
-  --ring: oklch(0.62 0.24 296);
+  --secondary: oklch(0.82 0.09 240);
+  --secondary-foreground: oklch(0.22 0.03 265);
+  --muted: oklch(0.96 0.01 270);
+  --muted-foreground: oklch(0.5 0.03 265);
+  --accent: oklch(0.68 0.16 285);
+  --accent-foreground: oklch(0.99 0 0);
+  --border: oklch(0.22 0.03 265 / 8%);
+  --ring: oklch(0.68 0.16 285);
 }
 
 @layer base {
   html,
   body {
-    background: #080808;
+    background: #f6f4ff;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -57,23 +57,24 @@
   }
 
   ::selection {
-    background: color-mix(in oklab, oklch(0.62 0.24 296) 40%, transparent);
-    color: white;
+    background: color-mix(in oklab, oklch(0.68 0.16 285) 30%, transparent);
+    color: oklch(0.22 0.03 265);
   }
 }
 
 @utility glass {
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.015)
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.55)
   );
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(120, 100, 200, 0.14);
   backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset, 0 8px 24px -12px rgba(124,58,237,0.15);
 }
 
 @utility grad-text {
-  background: linear-gradient(90deg, #ffffff 0%, #c7bfff 45%, #7dd3fc 100%);
+  background: linear-gradient(90deg, #7C3AED 0%, #8b5cf6 45%, #06B6D4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -81,7 +82,7 @@
 
 @utility grad-border {
   position: relative;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.65));
 }
 @utility grad-border-ring {
   &::before {
@@ -90,7 +91,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(124,58,237,0.6), rgba(6,182,212,0.4), rgba(255,255,255,0.05));
+    background: linear-gradient(135deg, rgba(124,58,237,0.45), rgba(6,182,212,0.35), rgba(180,170,230,0.15));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -120,7 +121,7 @@
 @utility animate-marquee { animation: marquee 40s linear infinite; }
 @utility animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
 @utility shine-text {
-  background: linear-gradient(90deg, #a1a1aa 0%, #ffffff 50%, #a1a1aa 100%);
+  background: linear-gradient(90deg, #a78bfa 0%, #7C3AED 50%, #06B6D4 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
