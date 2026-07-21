@@ -82,7 +82,7 @@ function Nav() {
         </nav>
         <a
           href="#contact"
-          className="group inline-flex items-center gap-1.5 rounded-full bg-white pl-4 pr-3 py-2 text-sm font-medium text-black hover:bg-slate-900/90 transition"
+          className="group inline-flex items-center gap-1.5 rounded-full bg-[#7C3AED] pl-4 pr-3 py-2 text-sm font-medium text-white hover:bg-[#6d28d9] transition"
         >
           Start a project
           <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -188,7 +188,7 @@ function Hero() {
         >
           <a
             href="#contact"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-6 py-3.5 text-sm font-medium text-black transition hover:scale-[1.02]"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-[#7C3AED] px-6 py-3.5 text-sm font-medium text-white shadow-lg shadow-[#7C3AED]/25 transition hover:scale-[1.02] hover:bg-[#6d28d9]"
           >
             Start a project
             <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
@@ -299,7 +299,7 @@ function Process() {
       <div className="mx-auto max-w-5xl px-6">
         <SectionHeading eyebrow="Process" title={<>How we <span className="grad-text">turn ideas</span> into products.</>} />
         <div ref={ref} className="relative mt-16 pl-8 md:pl-16">
-          <div className="absolute left-2 md:left-6 top-0 bottom-0 w-px bg-white/10" />
+          <div className="absolute left-2 md:left-6 top-0 bottom-0 w-px bg-slate-200" />
           <motion.div
             style={{ height }}
             className="absolute left-2 md:left-6 top-0 w-px bg-gradient-to-b from-[#7C3AED] via-[#06B6D4] to-transparent"
@@ -442,7 +442,7 @@ function CTA() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="grad-border-ring relative overflow-hidden rounded-[32px] px-8 py-20 md:px-16 md:py-28 text-center">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#150a2e] via-[#0a0a0a] to-[#062634]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#ede9fe] via-white to-[#cffafe]" />
             <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[420px] w-[720px] rounded-full bg-[#7C3AED]/30 blur-[110px] animate-blob" />
             <div className="absolute bottom-0 right-0 h-[320px] w-[420px] rounded-full bg-[#06B6D4]/25 blur-[110px] animate-blob [animation-delay:-8s]" />
           </div>
@@ -457,7 +457,7 @@ function CTA() {
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <a
               href="mailto:hello@dialchimplabs.com"
-              className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-medium text-black transition hover:scale-[1.02]"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#7C3AED] px-6 py-3.5 text-sm font-medium text-white shadow-lg shadow-[#7C3AED]/25 transition hover:scale-[1.02] hover:bg-[#6d28d9]"
             >
               Schedule a consultation
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
