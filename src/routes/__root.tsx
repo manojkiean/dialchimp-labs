@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Dialchimp Labs — AI, Automation & Digital Innovation" },
+      { name: "description", content: "Dialchimp Labs builds intelligent digital solutions — AI agents, automation, web platforms, and end-to-end digital transformation." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Dialchimp Labs — AI, Automation & Digital Innovation" },
+      { property: "og:description", content: "Dialchimp Labs builds intelligent digital solutions — AI agents, automation, web platforms, and end-to-end digital transformation." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Dialchimp Labs — AI, Automation & Digital Innovation" },
+      { name: "twitter:description", content: "Dialchimp Labs builds intelligent digital solutions — AI agents, automation, web platforms, and end-to-end digital transformation." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/f4d03c3a-6109-4a27-94b7-e02ecfa934aa" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/f4d03c3a-6109-4a27-94b7-e02ecfa934aa" },
     ],
     links: [
       {

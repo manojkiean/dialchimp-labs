@@ -31,11 +31,11 @@ export const Route = createFileRoute("/")({
         content:
           "Dialchimp Labs builds intelligent digital solutions — AI agents, automation, web platforms, and end-to-end digital transformation.",
       },
-      { property: "og:title", content: "Dialchimp Labs — AI & Digital Innovation" },
+      { property: "og:title", content: "Dialchimp Labs — AI, Automation & Digital Innovation" },
       {
         property: "og:description",
         content:
-          "Intelligent digital solutions that automate workflows, accelerate growth, and create exceptional customer experiences.",
+          "Dialchimp Labs builds intelligent digital solutions — AI agents, automation, web platforms, and end-to-end digital transformation.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
