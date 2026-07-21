@@ -21,6 +21,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import heroVideo from "@/assets/hero-ai.mp4.asset.json";
+import heroPoster from "@/assets/hero-poster.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
