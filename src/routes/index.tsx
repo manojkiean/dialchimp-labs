@@ -105,14 +105,8 @@ function Hero() {
     <section ref={ref} id="top" className="relative overflow-hidden pt-40 pb-28 md:pt-52 md:pb-40">
       {/* video + animated mesh */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <video
-          src={heroVideo.url}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-70 mix-blend-multiply"
-        />
+        <HeroVideo />
+
         <div className="absolute inset-0 bg-gradient-to-b from-[#f6f4ff]/40 via-[#f6f4ff]/60 to-[#f6f4ff]" />
         <div className="absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full bg-[#7C3AED]/25 blur-[120px] animate-blob" />
         <div className="absolute top-24 -right-32 h-[520px] w-[520px] rounded-full bg-[#06B6D4]/20 blur-[120px] animate-blob [animation-delay:-6s]" />
